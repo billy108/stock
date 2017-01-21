@@ -4,20 +4,17 @@
             <th>EAN</th>
             <th>图案尺寸</th>
             <th>Quality</th>
-            <!--TODO:根据数据库变化的-->
-            <!--<th>数量</th>-->
-            <!--<th>销售额</th>-->
+            <th class="month" ng-repeat-start="item1 in monthList">{{item1.month}}销量</th>
+            <th ng-repeat-end>销售额</th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="item in productList">
+        <tr ng-repeat="item in statisticsList">
             <td>{{item.ean}}</td>
-            <td>{{item.design_id}} {{item.size}}</td>
-            <td>{{item.supplier}}</td>
+            <td>  </td>
+            <td>  </td>
         </tr>
     </tbody>
 </table>
 <div id="">
-    {{allOrderList}}
-    <!--{"2016":{"03":{"9350329000528":1}},"2017":{"01":{"9350329002768":4,"9350329000429":1}}}-->
 </div>

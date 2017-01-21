@@ -1,0 +1,1 @@
+const statistics_start_date = "201603";
