@@ -26,19 +26,10 @@ app.controller("startCtrl", function ($scope, $http) {
     months.push(i);
     $scope.head_months.push("d" + i.toString());
   }
-  //获取联表查询的信息
-  //$.post("./data/getStatisticsList_update.php",
-  //      {currentTime:months},
-  //      function (data) {
-  //        $scope.statisticsList = data;
-  //      });
   $http.get("./data/getStatisticsList_update.php").success(function (data) {
-    console.log(data);
     $scope.statisticsList = data;
+    console.log(data);
   });
-  //$http.get("./data/getList.php").success(function (data) {
-  //  $scope.productList = data;
-  //});
 });
 
 

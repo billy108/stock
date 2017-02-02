@@ -40,15 +40,27 @@ CREATE TABLE productList(
 CREATE TABLE salesStatistics( 
 	ean  VARCHAR(20),
 	d201603 int(2) default 0,
+	s201603 float(8,2) default 0,
 	d201604 int(2) default 0,
+	s201604 float(8,2) default 0,
 	d201605 int(2) default 0,
+	s201605 float(8,2) default 0,
 	d201606 int(2) default 0,
+	s201606 float(8,2) default 0,
 	d201607 int(2) default 0,
+	s201607 float(8,2) default 0,
 	d201608 int(2) default 0,
+	s201608 float(8,2) default 0,
 	d201609 int(2) default 0,
+	s201609 float(8,2) default 0,
 	d201610 int(2) default 0,
+	s201610 float(8,2) default 0,
 	d201611 int(2) default 0,
-	d201612 int(2) default 0
+	s201611 float(8,2) default 0,
+	d201612 int(2) default 0,
+	s201612 float(8,2) default 0,
+	d201701 int(2) default 0,
+	s201701 float(8,2) default 0
 );
 
 CREATE TABLE orderList( 
