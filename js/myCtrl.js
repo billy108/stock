@@ -3,10 +3,12 @@ var app = angular.module("myCtrl", ["ngRoute"]);
 
 app.controller("startCtrl", function ($scope, $http) {
   //系统当前时间
-  var currentTime = new Date().Format("yyyyMM");
+  var currentTime = new Date().Format("yyyyMM").toString();
   //当页面加载时，在start.html自动添加表头
 
   //表头的月份List
+  var months = [];
+  $scope.head_months = [];
   $scope.monthList = [];
   for(var i = Number(statistics_start_date);i<=Number(currentTime);i++){
     var year = i.toString().substr(0, 4);
@@ -21,19 +23,22 @@ app.controller("startCtrl", function ($scope, $http) {
     item.month = i;
     item.sales = "销量";
     $scope.monthList.push(item);
+    months.push(i);
+    $scope.head_months.push("d" + i.toString());
   }
-  //获取OrderList信息
-  $http.get("./data/getStatisticsList.php").success(function (data) {
-    $scope.statisticsList = data;
+  //获取联表查询的信息
+  //$.post("./data/getStatisticsList_update.php",
+  //      {currentTime:months},
+  //      function (data) {
+  //        $scope.statisticsList = data;
+  //      });
+  $http.get("./data/getStatisticsList_update.php").success(function (data) {
     console.log(data);
-    // for(var i=0;i<$scope.orderList.length;i++){
-    //   sortOrderList(data[i],$scope.allOrderList);
-    // }
+    $scope.statisticsList = data;
   });
-  //获取商品List信息
-  $http.get("./data/getList.php").success(function (data) {
-    $scope.productList = data;
-  });
+  //$http.get("./data/getList.php").success(function (data) {
+  //  $scope.productList = data;
+  //});
 });
 
 

@@ -4,15 +4,37 @@
             <th>EAN</th>
             <th>图案尺寸</th>
             <th>Quality</th>
-            <th class="month" ng-repeat-start="item1 in monthList">{{item1.month}}销量</th>
+            <th class="month" ng-repeat-start="item1 in monthList">d{{item1.month}}销量</th>
             <th ng-repeat-end>销售额</th>
         </tr>
     </thead>
     <tbody>
         <tr ng-repeat="item in statisticsList">
             <td>{{item.ean}}</td>
-            <td>  </td>
-            <td>  </td>
+            <td>{{item.design_id}} {{item.size}}</td>
+            <td>{{item.supplier}}</td>
+            <td>{{item.d201603}}</td>
+            <td>{{item.d201603*item.price}}</td>
+            <td>{{item.d201604}}</td>
+            <td>{{item.d201604*item.price}}</td>
+            <td>{{item.d201605}}</td>
+            <td>{{item.d201605*item.price}}</td>
+            <td>{{item.d201606}}</td>
+            <td>{{item.d201606*item.price}}</td>
+            <td>{{item.d201607}}</td>
+            <td>{{item.d201607*item.price}}</td>
+            <td>{{item.d201608}}</td>
+            <td>{{item.d201608*item.price}}</td>
+            <td>{{item.d201609}}</td>
+            <td>{{item.d201609*item.price}}</td>
+            <td>{{item.d201610}}</td>
+            <td>{{item.d201610*item.price}}</td>
+            <td>{{item.d201611}}</td>
+            <td>{{item.d201611*item.price}}</td>
+            <td>{{item.d201612}}</td>
+            <td>{{item.d201612*item.price}}</td>
+            <td>{{item.d201701}}</td>
+            <td>{{item.d201701*item.price}}</td>
         </tr>
     </tbody>
 </table>
