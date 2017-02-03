@@ -8,4 +8,7 @@ app.config(function ($routeProvider) {
     });
 });
 
+$("#btn_addOrderList").click(function () {
+  console.log("11111111111111");
+});
 

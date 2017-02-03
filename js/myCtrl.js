@@ -4,7 +4,6 @@ var app = angular.module("myCtrl", ["ngRoute"]);
 app.controller("startCtrl", function ($scope, $http) {
   //系统当前时间
   var currentTime = new Date().Format("yyyyMM").toString();
-  //当页面加载时，在start.html自动添加表头
 
   //表头的月份List
   var months = [];
@@ -28,8 +27,12 @@ app.controller("startCtrl", function ($scope, $http) {
   }
   $http.get("./data/getStatisticsList_update.php").success(function (data) {
     $scope.statisticsList = data;
-    console.log(data);
   });
+  //获取近三个月的销售额
+  $scope.nearly_3_months = [];
+  for(var i = $scope.head_months.length;i>$scope.head_months.length - 4;i--){
+    $scope.nearly_3_months.push("s" + $scope.head_months[i-1].substr(1));//[ "s201702", "s201701", "s201612", "s201611" ]
+  }
 });
 
 

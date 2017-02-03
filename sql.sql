@@ -68,7 +68,6 @@ CREATE TABLE orderList(
 	ebay_account  VARCHAR(20),
  	ean  varchar(20),
 	sold_quantity int(2),
-	price float(6,2),
 	total float(8,2),
 	pattern_size varchar(50)
 ); 
@@ -78,7 +77,6 @@ CREATE TABLE temp_orderList(
 	ebay_account  VARCHAR(20),
  	ean  varchar(20),
 	sold_quantity int(2),
-	price float(6,2),
 	total float(8,2),
 	pattern_size varchar(50)
 ); 
@@ -93,10 +91,10 @@ SET NAMES UTF8;
  ("9350329000092","MC002SIL05BLU4789","IEJ05","","","IVORY_YELLOW","30x280",2.32,"鑫源皮毛",45,2,6.5,5,5,20.00,100000,"13*12*196",13.00,15.00,1.00,"Polyester",200.00,80.00,80.00,200.00,200.00,200.00,200.00,200.00,200.00);
 
  INSERT INTO orderList VALUES 
- ("2017-1-19","rugaustralia","9350329002768",1,339.99,399.99,"Floor Rug MOD03 190x280cm"),
- ("2016-7-18","aussierugs","9350329000597",1,39.99,99.99,"SILVIA Floor Rug SIL05 190x280cm"),
- ("2017-1-18","rugaustralia","9350329001464",1,435,435,"Floor Rug SIL06 240x340cm"),
- ("2016-3-30","aussierugs","9350329000504",1,179.99,179.99,"SILVIA Floor Rug SIL01 155x225cm"),
- ("2016-3-15","aussierugs","9350329000504",1,179.99,179.99,"SILVIA Floor Rug SIL01 155x225cm");
+ ("2017-1-19","rugaustralia","9350329002768",1,399.99,"Floor Rug MOD03 190x280cm"),
+ ("2016-7-18","aussierugs","9350329000597",1,99.99,"SILVIA Floor Rug SIL05 190x280cm"),
+ ("2017-1-18","rugaustralia","9350329001464",1,435,"Floor Rug SIL06 240x340cm"),
+ ("2016-3-30","aussierugs","9350329000504",1,179.99,"SILVIA Floor Rug SIL01 155x225cm"),
+ ("2016-3-15","aussierugs","9350329000504",1,179.99,"SILVIA Floor Rug SIL01 155x225cm");
  
  

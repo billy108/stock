@@ -7,6 +7,24 @@
             <th class="month" ng-repeat-start="item1 in monthList">d{{item1.month}}销量</th>
             <th ng-repeat-end>销售额</th>
             <th>近三月累计销售额</th>
+            <th>三月占比</th>
+            <th>累计占比</th>
+            <th>帕累托等级</th>
+            <th>近7天日均销量</th>
+            <th>近15天日均销量</th>
+            <th>近30天日均销量</th>
+            <th>销量趋势</th>
+            <th>日均库存</th>
+            <th>库存等级</th>
+            <th>库存期</th>
+            <th>备货周期(生+海)</th>
+            <th>采购频率</th>
+            <th>推荐库存</th>
+            <th>现在库存</th>
+            <th>在途库存</th>
+            <th>生产中库存</th>
+            <th>推荐备货</th>
+            <th>平米数</th>
         </tr>
     </thead>
     <tbody>
@@ -36,6 +54,9 @@
             <td>{{item.s201612}}</td>
             <td>{{item.d201701}}</td>
             <td>{{item.s201701}}</td>
+            <td>{{item.d201702}}</td>
+            <td>{{item.s201702}}</td>
+            <td>{{item.s201702 - (-item.s201701) - (-item.s201612) - (-item.s201611)}}</td>
         </tr>
     </tbody>
 </table>
