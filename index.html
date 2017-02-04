@@ -12,6 +12,20 @@
 <h1>欢迎回来！Ivy</h1>
 <button id="btn_addOrderList" class="btn btn-success">添加订单</button>
 <div ng-view></div>
+<!--addOrderList窗口-->
+<div id="container">
+    <div id="addOrderListContainer"></div>
+    <div id="orderList">
+        <h2>添加订单</h2>
+        <a href="http://www.bejson.com/json/col2json/" target="_blank">http://www.bejson.com/json/col2json/</a>
+        <form action="./data/addOrderList.php" method="post">
+            <textarea rows="12" name="text_addOrderList" id="text_addOrderList" placeholder="登陆上面的网址，请在excel里复制下内容贴到上面一个文本框里"></textarea>
+            <button id="addList" class="btn btn-primary">添加</button>
+        </form>
+
+    </div>
+</div>
+
 
 
 <script src="js/libs/jquery-1.11.1.js"></script>
