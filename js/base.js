@@ -31,3 +31,8 @@ $("#addList").click(function () {
   }
 });
 
+$("#closeList").click(function () {
+  //隐藏addOrderList界面
+  $("#container").hide();
+});
+
