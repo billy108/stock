@@ -13,12 +13,13 @@ $("#btn_addOrderList").click(function () {
 });
 
 $("#addList").click(function () {
-  var txt = $("#text_addOrderList").val();
+  var txt = '{"json":' + $("#text_addOrderList").val() + '}';
+  var json = JSON.parse(txt);
   //内容不为空，异步提交内容
   if(txt.length != 0){
     $.post(
       "./data/addOrderList.php",
-      txt,
+      json,
       function (data) {
         console.log(data);
         //隐藏addOrderList界面
@@ -26,7 +27,7 @@ $("#addList").click(function () {
       }
     , "json");
   }else{
-    confirm("请填写内容！")
+    alert("请填写内容！")
   }
 });
 
